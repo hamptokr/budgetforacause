@@ -1,18 +1,18 @@
 {
   "name": "budgetforacause",
-  "version": "1.0.0",
-  "description": "A budgeting app for the greater good.",
-  "main": "index.js",
+  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node ./bin/www"
   },
-  "author": "",
-  "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.18.2",
-    "express": "^4.16.2",
-    "nodemon": "^1.17.1",
-    "pug": "^2.0.0-rc.4"
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "~4.15.5",
+    "morgan": "~1.9.0",
+    "node-sass-middleware": "0.9.8",
+    "pug": "2.0.0-beta11",
+    "serve-favicon": "~2.4.5"
   }
 }
