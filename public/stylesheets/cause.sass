@@ -14,16 +14,24 @@ h2
 
 .scroll_bars
   flex: 3
-
+  padding-top: 40px;
 
 .chart
   flex: 2
 
+.slidecontainer
+  display: flex;
+
+.slide
+  padding-left: 10%;
+  float: left;
+  flex: 1;
+  display: block;
+
 .slider
   -webkit-appearance: none;
-  margin: 10px auto 40px auto;
-  display: block
-  width: 80%;
+  margin: 0px 15px 50px 10px;
+  flex: 6;
   height: 15px;
   border-radius: 5px;
   background: #d3d3d3;
@@ -38,16 +46,31 @@ h2
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: #47d147;
   cursor: pointer
 
 .slider::-moz-range-thumb
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #4CAF50;
+  background: #47d147;
   cursor: pointer;
 
 
-label
-  padding-left: 10%;
+p
+  display: block;
+  flex: 1;
+  padding: 0;
+  margin: 0;
+
+button
+    background-color: #47d147 /* Green */
+    border: none
+    color: white
+    padding: 20px 20px
+    text-align: center
+    text-decoration: none
+    display: block
+    font-size: 16px
+    border-radius: 8px
+    margin: auto;
