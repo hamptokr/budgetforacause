@@ -1,0 +1,31 @@
+extends ./shared/base.pug
+
+block append styles
+    link(rel='stylesheet', href='/stylesheets/cause.css')
+
+
+block content
+    include ./shared/navbar.pug
+
+    div(class = "amount_display")
+        h1 Amount Given: $
+
+
+
+    div(class = "scroll_chart_display")
+        div(class = "scroll_bars")
+            h2 Choose Giving Portfolio
+            div(class="slidecontainer")
+                label(for="education") Education
+                input(type="range" min="1" max="100" value="50" class="slider" id="education")
+                label(for="water") Water
+                input(type="range" min="1" max="100" value="50" class="slider" id="water")
+                label(for="disaster") Disaster
+                input(type="range" min="1" max="100" value="50" class="slider" id="disaster")
+                label(for="BackToUs") Donate to BFAC
+                input(type="range" min="1" max="100" value="50" class="slider" id="BackToUs")
+
+
+
+        div(class = "chart")
+            h2 Chart
