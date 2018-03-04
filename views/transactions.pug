@@ -16,7 +16,9 @@ block content
         div(class='card')
           div(class='container')
             h4=entry.name
-            p=entry.amount
+            div(class='card-contents')
+              div=entry.amount
+              div=entry.children_fed
       //table(class='budget-table')
       //  tr
       //    th(class='budget-table-header') Date

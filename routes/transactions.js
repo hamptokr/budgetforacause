@@ -27,7 +27,8 @@ function getTransactionArray(user_id, callback) {
                 date: row['date'],
                 name: row['name'],
                 amount: row['amount'],
-                category: row['category']
+                category: row['category'],
+                children_fed: row['amount'] / 100 / 0.2
             });
             console.log(row);
         }
