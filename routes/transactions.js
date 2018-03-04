@@ -8,7 +8,7 @@ router.get('/', function (req, res, next) {
 
     getTransactionArray(42, function(transaction_array) {
         console.log(transaction_array);
-        res.render('index', {transaction_data: transaction_array});
+        res.render('transactions', {transaction_data: transaction_array});
     });
 
 });
