@@ -50,6 +50,15 @@ function init() {
   //     scaleMinSpace: 15
   //   }
   // });
+    var difElements = document.querySelectorAll('.difference');
+    difElements.forEach(function(element){
+        if(Number(element.textContent) < 0){
+            element.style.color = '#ff471a';
+            element.style.backgroundColor = '#ffebe6';
+        }else{
+            element.style.backgroundColor = '#e6fff5';
+        }
+    });
 }
 
 window.onload = init;
