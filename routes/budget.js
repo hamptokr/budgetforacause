@@ -9,25 +9,29 @@ router.get('/', function (req, res, next) {
     // });
     //
     // console.log('it was get!');
-    var budget_array = [
-        {
-            category: "Food",
-            amount: 50000
-        },
-        {
-            category: "Car",
-            amount: 12000
-        }
-    ];
+    // var budget_array = [
+    //     {
+    //         category: "Food",
+    //         target: 50000
+    //     },
+    //     {
+    //         category: "Car",
+    //         target: 12000
+    //     }
+    // ];
+    //
+    // putBudgetArray(
+    //     42,
+    //     budget_array,
+    //     function () {
+    //         console.log('job done')
+    //     }
+    // );
+    // renderBudgetPage(req, res);
+    getBudgetArray(42, function(budget_array) {
+        res.render('budget', {budget_data: budget_array});
+    });
 
-    putBudgetArray(
-        42,
-        budget_array,
-        function () {
-            console.log('job done')
-        }
-    );
-    renderBudgetPage(req, res);
 });
 
 router.post('/', function (req, res, next) {
@@ -60,7 +64,9 @@ function getBudgetArray(user_id, callback) {
             var row = results[i];
             budget_array.push({
                 category: row['category'],
-                amount: row['amount']
+                target: row['target'],
+                actual: row['actual'],
+                difference: row['target'] - row['actual']
             });
             console.log(row);
         }
@@ -79,9 +85,9 @@ function putBudgetArray(user_id, budget_data, callback) {
         var budget_field = budget_data[i];
         console.log(budget_field);
         connection.query(
-            'UPDATE b4c.budgets SET amount = ? WHERE user_id = ? AND category = ?',
+            'UPDATE b4c.budgets SET target = ? WHERE user_id = ? AND category = ?',
             [
-                budget_field['amount'],
+                budget_field['target'],
                 user_id,
                 budget_field['category']
             ],
@@ -97,8 +103,5 @@ function putBudgetArray(user_id, budget_data, callback) {
     connection.end();
 }
 
-function renderBudgetPage(req, res) {
-    res.render('budget', {title: 'budget my dude'});
-}
 
 module.exports = router;
