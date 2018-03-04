@@ -5,5 +5,22 @@ block append styles
 
 block content
   include ./shared/navbar.pug
-  h1 Testing Budget
-
+  section(class='budget-charts-section')
+    div(class='budget-chart-container')
+      h1 Current
+    div(class='budget-chart-container')
+      h1 Goal
+  section(class='budget-table-section')
+    div(class='budget-table-container')
+      table(class='budget-table')
+        tr
+          th(class='budget-table-header') Category
+          th(class='budget-table-header') Current
+          th(class='budget-table-header') Goal
+          th(class='budget-table-header') Difference
+        each entry in budget_data
+          tr
+            td(class='budget-table-item')=entry.category
+            td(class='budget-table-item')=entry.actual
+            td(class='budget-table-item')=entry.target
+            td(class='budget-table-item')=entry.difference

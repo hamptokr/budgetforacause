@@ -1,5 +1,7 @@
 var express = require('express');
+var db = require('../database.js');
 var router = express.Router();
+
 
 /* GET home page. */
 router.get('/', function (req, res, next) {
@@ -40,21 +42,8 @@ router.post('/', function (req, res, next) {
     renderBudgetPage(req, res);
 });
 
-function getDatabaseConnection() {
-    var mysql = require('mysql');
-    var connection = mysql.createConnection({
-        host: 'budgetforacausesql.cgcmts38rmc9.us-east-1.rds.amazonaws.com',
-        user: 'jmk',
-        password: 'The_Singleton_Pattern',
-        database: 'b4c'
-    });
-
-    connection.connect();
-    return connection;
-}
-
 function getBudgetArray(user_id, callback) {
-    var connection = getDatabaseConnection();
+    var connection = db.getDatabaseConnection();
 
     connection.query('SELECT * FROM budgets WHERE user_id = ?', [user_id], function (error, results, fields) {
         if (error) throw error;
@@ -77,7 +66,7 @@ function getBudgetArray(user_id, callback) {
 }
 
 function putBudgetArray(user_id, budget_data, callback) {
-    var connection = getDatabaseConnection();
+    var connection = db.getDatabaseConnection();
 
     var resolvedCallbacks = 0;
 
