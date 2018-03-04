@@ -1,0 +1,47 @@
+@import '_variables.sass'
+
+/* Global Styles */
+
+body
+  font-family: $base-font-family;
+  margin: 0;
+  padding: 0;
+
+a
+  text-decoration: none;
+
+a:visited
+  text-decoration: none;
+
+/* Nav Styles */
+
+.navbar
+    width: 100vw;
+    height: 5vh;
+    color: $primary;
+    box-shadow: 0px 1px 17px grey;
+    display: flex;
+    align-items: center;
+
+.nav-brand-container
+  display: flex;
+  justify-content: flex-start;
+
+.brand
+  color: $primary;
+  font-size: 36px;
+  margin-left: 15px;
+
+.nav-link-container
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+
+.nav-link
+  color: $primary;
+  font-size: 20px;
+  &:hover
+    color: $secondary;
+    transform: scale(1.1);
+  &:visited
+    color: $primary;
