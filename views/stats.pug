@@ -1,26 +1,48 @@
 extends ./shared/base.pug
 
 block append styles
-    link(rel='stylesheet', href='/stylesheets/base.css')
+    link(rel='stylesheet', href='/stylesheets/stats.css')
+
+block append scripts
+    script(src="/javascripts/stats.js")
 
 block content
     include ./shared/navbar.pug
 
-    div(class = "amount_display")
-        h1 Amount Given: $
+    div(class="container")
 
-    div(class = "scroll_chart_display")
-        div(class = "scroll_bars")
-            h2 Choose Giving Portfolio
-            div(class="slidecontainer")
-                label(for="education") Education
-                input(type="range" min="1" max="100" value="50" class="slider" id="education")
-                label(for="water") Water
-                input(type="range" min="1" max="100" value="50" class="slider" id="water")
-                label(for="disaster") Disaster
-                input(type="range" min="1" max="100" value="50" class="slider" id="disaster")
-                label(for="BackToUs") Donate to BFAC
-                input(type="range" min="1" max="100" value="50" class="slider" id="BackToUs")
+        div(class="row_one")
+            h1(class="title") You've Donated $1245.30 this Year!
 
-        div(class = "chart")
-            h2 Chart
+        div(class="row_two")
+            div(class="info_container")
+                div(class="img")
+                    img(class="icon" src="/images/si-glyph-person-public.svg")
+                div(class="info")
+                    h1(class="info_title") 270
+                    p Families Fed
+            div(class="info_container")
+                div(class="img")
+                    img(class="icon" src="/images/si-glyph-calculator.svg")
+                div(class="info")
+                    h1(class="info_title") 130
+                    p Kids Educated
+            div(class="info_container")
+                div(class="info")
+                    img(class="icon" src="/images/si-glyph-cloud-thunder.svg")
+                div(class="img")
+                    h1(class="info_title") 3
+                    p Disasters Aided
+            div(class="info_container")
+                div(class="info")
+                    img(class="icon" src="/images/si-glyph-house.svg")
+                div(class="img")
+                    h1(class="info_title") 4
+                    p Shelters Supported
+        div(class="row_three")
+            div(class="chart_one")
+                p(class="chart_title") Monthly Donation Amounts
+                canvas(id="month_bar_chart")
+            div(class="chart_two")
+                p(class="chart_title") Overall Donation Breakdown
+                canvas(id="overall_pi_chart")
