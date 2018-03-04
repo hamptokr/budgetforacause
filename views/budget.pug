@@ -1,15 +1,13 @@
 extends ./shared/base.pug
 
 block append styles
-  link(rel='stylesheet', href='/stylesheets/budget.css')
+  link(rel='stylesheet' href='/stylesheets/budget.css')
 
 block content
   include ./shared/navbar.pug
   section(class='budget-charts-section')
     div(class='budget-chart-container')
-      h1 Current
-    div(class='budget-chart-container')
-      h1 Goal
+      div(id='budget-chart')
   section(class='budget-table-section')
     div(class='budget-table-container')
       table(class='budget-table')
@@ -24,3 +22,6 @@ block content
             td(class='budget-table-item')=entry.actual
             td(class='budget-table-item')=entry.target
             td(class='budget-table-item')=entry.difference
+
+block append scripts
+  script(src='/javascripts/budget.js')
