@@ -42,12 +42,12 @@ function init(){
             datasets: [{
                 data: [educationNum.value, waterNum.value, disasterNum.value, homelessNum.value, veteransNum.value, donateNum.value],
                 backgroundColor: [
-                    '#b3ffb3',
-                    '#80ff80',
-                    '#4dff4d',
-                    '#80ff80',
-                    '#4dff4d',
-                    '#80ff80'
+                    '#b3ecff',
+                    '#e6ccff',
+                    '#ffcce6',
+                    '#ccff99',
+                    '#ff9999',
+                    '#ffcc80'
                 ]
             }],
             // These labels appear in the legend and in the tooltips when hovering different arcs
