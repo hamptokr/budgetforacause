@@ -1,0 +1,31 @@
+extends ./shared/base.pug
+
+block append styles
+  link(rel='stylesheet', href='/stylesheets/transactions.css')
+
+block content
+  include ./shared/navbar.pug
+  //section(class='budget-charts-section')
+  //  div(class='budget-chart-container')
+  //    h1 Current
+  //  div(class='budget-chart-container')
+  //    h1 Goal
+  section(class='budget-table-section')
+    div(class='card-parent')
+      each entry in transaction_data
+        div(class='card')
+          div(class='container')
+            h4=entry.name
+            p=entry.amount
+      //table(class='budget-table')
+      //  tr
+      //    th(class='budget-table-header') Date
+      //    th(class='budget-table-header') Name
+      //    th(class='budget-table-header') Amount
+      //    th(class='budget-table-header') Category
+      //  each entry in transaction_data
+      //    tr
+      //      td(class='budget-table-item')=entry.date
+      //      td(class='budget-table-item')=entry.name
+      //      td(class='budget-table-item')=entry.amount
+      //      td(class='budget-table-item')=entry.category
