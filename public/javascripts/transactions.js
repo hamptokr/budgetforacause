@@ -6,13 +6,13 @@ function init(){
         var cost = Number(costs[i].innerHTML.substr(2));
         console.log(cost);
         if(cost < 20){
-            transactions[i].innerHTML = "Equal to " + Math.round(cost/3).toString()+ " meals"
+            transactions[i].innerHTML = "Equal to " + Math.round(cost/3).toString()+ " meal(s)"
         }else if(cost < 50){
-            transactions[i].innerHTML = "Equal to " + Math.round(cost/5).toString() + " first-aid kits"
+            transactions[i].innerHTML = "Equal to " + Math.round(cost/5).toString() + " first-aid kit(s)"
         }else if(cost < 100){
-            transactions[i].innerHTML = "Equal to " + Math.round(cost/10).toString() + " water crates"
+            transactions[i].innerHTML = "Equal to " + Math.round(cost/10).toString() + " water crate(s)"
         }else{
-            transactions[i].innerHTML = "Equal to " + Math.round(cost/50).toString() + " youth educations"
+            transactions[i].innerHTML = "Equal to " + Math.round(cost/50).toString() + " kids' school supplies"
         }
     }
 
