@@ -8,34 +8,34 @@ block content
     include ./shared/navbar.pug
 
     div(class = "amount_display")
-        h1 Amount Given (YTD): $140.34
+        h1 Donation for this Month: $140.34
 
     div(class = "scroll_chart_display")
         div(class = "scroll_bars")
             div(class="slidecontainer")
                 label(for="education" class="slide") Education
                 input(type="range" min="0" max="100" value="20" class="slider" id="education")
-                p(id="educationLabel") 0
+                p(id="educationLabel")
             div(class="slidecontainer")
                 label(for="water" class="slide") Water
                 input(type="range" min="0" max="100" value="20" class="slider" id="water")
-                p(id="waterLabel") 0
+                p(id="waterLabel")
             div(class="slidecontainer")
                 label(for="disaster" class="slide") Disaster
                 input(type="range" min="0" max="100" value="20" class="slider" id="disaster")
-                p(id="disasterLabel") 0
+                p(id="disasterLabel")
             div(class="slidecontainer")
                 label(for="homeless" class="slide") Homeless
                 input(type="range" min="0" max="100" value="20" class="slider" id="homeless")
-                p(id="homelessLabel") 0
+                p(id="homelessLabel")
             div(class="slidecontainer")
                 label(for="veterans" class="slide") Veterans
                 input(type="range" min="0" max="100" value="20" class="slider" id="veterans")
-                p(id="veteranLabel") 0
+                p(id="veteranLabel")
             div(class="slidecontainer")
                 label(for="BackToUs" class="slide") Donate to B4C
                 input(type="range" min="0" max="100" value="20" class="slider" id="BackToUs")
-                p(id="donateLabel") 0
+                p(id="donateLabel")
 
             button Submit Charity Portfolio
 
