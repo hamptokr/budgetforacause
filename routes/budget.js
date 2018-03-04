@@ -98,7 +98,7 @@ function putBudgetArray(user_id, budget_data, callback) {
 }
 
 function renderBudgetPage(req, res) {
-    res.render('index', {title: 'budget my dude'});
+    res.render('budget', {title: 'budget my dude'});
 }
 
 module.exports = router;
