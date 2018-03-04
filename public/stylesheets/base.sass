@@ -4,8 +4,10 @@
 
 body
   font-family: $base-font-family;
+  background-color: darken(#FFFBFA, 1%);
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
 
 a
   text-decoration: none;
@@ -18,10 +20,10 @@ a:visited
 .navbar
     width: 100vw;
     height: 5vh;
-    color: $primary;
-    box-shadow: 0px 1px 17px grey;
     display: flex;
     align-items: center;
+    padding-bottom: 8px;
+    border-bottom: 1px solid $primary;
 
 .nav-brand-container
   display: flex;
@@ -42,7 +44,7 @@ a:visited
   color: $primary;
   font-size: 20px;
   &:hover
-    color: $secondary;
+    color: $secondary !important;
     transform: scale(1.1);
   &:visited
     color: $primary;
