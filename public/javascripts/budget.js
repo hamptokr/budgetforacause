@@ -1,13 +1,18 @@
 function init() {
   let categories = [];
-  let series = [];
+  let target = [];
+  let actual = [];
   for (let i = 0; i < data.length; i++) {
     categories.push(data[i].category);
-    series.push([data[i].actual, data[i].target])
+    target.push(data[i].target);
+    actual.push(data[i].actual);
   }
   new Chartist.Bar('#budget-chart', {
     labels: categories,
-    series: series
+    series: [
+      target,
+      actual
+    ]
   }, {
     seriesBarDistance: 10,
     axisX: {
