@@ -15,24 +15,24 @@ function init(){
     // document.getElementById('veteranLabel').innerHTML = veteransNum.value;
     // document.getElementById('donateLabel').innerHTML = donateNum.value;
 
-    educationNum.oninput = function(){
-        document.getElementById('educationLabel').innerHTML = educationNum.value;
-    };
-    waterNum.oninput = function(){
-        document.getElementById('waterLabel').innerHTML = waterNum.value;
-    };
-    disasterNum.oninput = function(){
-        document.getElementById('disasterLabel').innerHTML = disasterNum.value;
-    };
-    homelessNum.oninput = function(){
-        document.getElementById('homelessLabel').innerHTML = homelessNum.value;
-    };
-    veteransNum.oninput = function(){
-        document.getElementById('veteranLabel').innerHTML = veteransNum.value;
-    };
-    donateNum.oninput = function(){
-        document.getElementById('donateLabel').innerHTML = donateNum.value;
-    };
+    // educationNum.oninput = function(){
+    //     document.getElementById('educationLabel').innerHTML = educationNum.value;
+    // };
+    // waterNum.oninput = function(){
+    //     document.getElementById('waterLabel').innerHTML = waterNum.value;
+    // };
+    // disasterNum.oninput = function(){
+    //     document.getElementById('disasterLabel').innerHTML = disasterNum.value;
+    // };
+    // homelessNum.oninput = function(){
+    //     document.getElementById('homelessLabel').innerHTML = homelessNum.value;
+    // };
+    // veteransNum.oninput = function(){
+    //     document.getElementById('veteranLabel').innerHTML = veteransNum.value;
+    // };
+    // donateNum.oninput = function(){
+    //     document.getElementById('donateLabel').innerHTML = donateNum.value;
+    // };
 
     var ctx = document.getElementById('donut_chart').getContext('2d');
     var chart = new Chart(ctx, {

@@ -1,5 +1,25 @@
-extends layout
+extends ./shared/base.pug
+
+block append styles
+  link(rel='stylesheet', href='/stylesheets/index.css')
 
 block content
-  h1= title
-  p Welcome to #{title}
+  div(class="container")
+    div(class="main_pain")
+      img(class='jumbo_image' src="images/bike.jpeg")
+      div(class='centered')
+        h1 Budget For A Cause
+        p Cut back on spending while giving to the charities you love
+    div(class="bottom_panel")
+      div(class="info")
+        h2 Save More
+        p Staying on track with our savings goals can be tough. We may forget our financial goals or in some cases not even have financial goals.
+        p By using B4C you will have access to financial planning tools that are attached to the incentive of giving to those who need it most
+      div(class="info")
+        h2 Give More
+        p Everyone dreams of donating millions to their favorite charity and changing the world. Sadly, we are not all in the position to randomly donate and this is something we need to plan for.
+        p Join us in our mission to give and have access to give to any of the following charity groups with even more options coming soon
+      div(class="info")
+        h2 Do More
+        p You no longer have to worry about taking hours upon hours planning out every detail of your finances. We are here for you!
+        p Let us handle the heavy lifting when it comes to managing transactions, planning budgets, and giving to the greater good.
