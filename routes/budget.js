@@ -53,9 +53,9 @@ function getBudgetArray(user_id, callback) {
             var row = results[i];
             budget_array.push({
                 category: row['category'],
-                target: row['target'],
-                actual: row['actual'],
-                difference: row['target'] - row['actual']
+                target: row['target']/100,
+                actual: row['actual']/100,
+                difference: (row['target'] - row['actual'])/100
             });
             console.log(row);
         }
