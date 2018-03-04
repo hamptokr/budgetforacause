@@ -28,3 +28,11 @@ node_modules
 
 # Debug log from npm
 npm-debug.log
+
+# CSS ignores
+*.css
+*.map
+
+# Idea Files
+*.idea
+*.workspace
