@@ -31,7 +31,13 @@ router.get('/', function (req, res, next) {
     // );
     // renderBudgetPage(req, res);
     getBudgetArray(42, function(budget_array) {
-        res.render('budget', {budget_data: budget_array});
+        res.render(
+            'budget',
+            {
+                stringified: JSON.stringify(budget_array),
+                budget_data: budget_array
+            }
+            );
     });
 
 });
