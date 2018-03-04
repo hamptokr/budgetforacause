@@ -9,7 +9,9 @@ block content
   include ./shared/navbar.pug
   section(class='budget-charts-section')
     div(class='budget-chart-container')
-      div(id='budget-chart')
+      //div(id='budget-chart')
+      h1 Current Spending vs Goals
+      canvas(id="canvas")
   section(class='budget-table-section')
     div(class='budget-table-container')
       table(class='budget-table')
