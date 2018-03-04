@@ -1,11 +1,13 @@
 function init() {
+  let categories = [];
+  let series = [];
+  for (let i = 0; i < data.length; i++) {
+    categories.push(data[i].category);
+    series.push([data[i].actual, data[i].target])
+  }
   new Chartist.Bar('#budget-chart', {
-    labels: ['First quarter of the year', 'Second quarter of the year', 'Third quarter of the year', 'Fourth quarter of the year'],
-    series: [
-      [60000, 40000, 80000, 70000],
-      [40000, 30000, 70000, 65000],
-      [8000, 3000, 10000, 6000]
-    ]
+    labels: categories,
+    series: series
   }, {
     seriesBarDistance: 10,
     axisX: {
@@ -13,9 +15,6 @@ function init() {
     },
     axisY: {
       offset: 80,
-      labelInterpolationFnc: function(value) {
-        return value + ' CHF'
-      },
       scaleMinSpace: 15
     }
   });

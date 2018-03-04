@@ -4,6 +4,8 @@ block append styles
   link(rel='stylesheet' href='/stylesheets/budget.css')
 
 block content
+  script(type='text/javascript').
+    const data = !{stringified}
   include ./shared/navbar.pug
   section(class='budget-charts-section')
     div(class='budget-chart-container')
